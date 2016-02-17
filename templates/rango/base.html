@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Rango</title>
+		<link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{% static 'css/rango.css' %}">
+	
+    </head>
+
+	<body>
+		<div class="page-header">
+			<h1><a href="/">Rango</a></h1>
+			<a href = "/rango" class="top-menu">><small>Home</small></a>
+			<a href = "/rango/about/" class="top-menu">><small>About</small></a>
+			<a href = "/rango/contact/" class="top-menu">><small>Contact Us</small></a><br />
+		</div>
+		<div class="content container">
+			<div class="row">
+				<div class="col-md-8">
+					{% block content %}
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+	</body>
+	
+</html>
